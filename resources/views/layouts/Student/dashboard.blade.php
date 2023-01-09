@@ -124,7 +124,7 @@
 
             <li>
               <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-               <Span class="me-2"><i class="bi bi-people"></i></Span><span>Learning Area</span><span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
+               <Span class="me-2"><i class="bi bi-book"></i></Span><span>Learning Area</span><span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
               </a>  
                
               <div class="collapse" id="collapseExample">
