@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('exam_results', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('Tresults')->nullable;
-            $table->string('Presults')->nullable;
+            $table->string('Tresults')->nullable();
+            $table->string('Presults')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete ('cascade');

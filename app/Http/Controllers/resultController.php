@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Student;
+use App\Models\examResult;
 use Illuminate\Support\Arr;
+use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
@@ -32,24 +33,10 @@ class resultController extends Controller
 
     public function create()
     {
-        //$all_users_with_all_their_roles = User::with('roles')->get();
-        //$users = User::all();
-        // $user_roles = [];
-        // $user_students = [];
-        // $student = [];
-
-        // foreach ($users as $user) {
-
-        // $user_roles=$user->getRoleNames();
-            
-        //   if($user_roles[0] == "student"){
-
-        //     $user_students[] = User::find($user->id)->student;
-        //     $duser[] = User::find($user->id);
-        //   }
-        // }
+        $results = Student::get();
+        //dd($results);
        
-        return view('admin.results.create');
+        return view('admin.results.create',compact('results'));
     }
 
     /**
@@ -74,8 +61,8 @@ class resultController extends Controller
         $result = new examResult;
  
         $result->user_id = $request->user_id;
-        $result->TResult = $request->TResult;
-        $result->PResult = $request->PResult;
+        $result->Tresults = $request->Tresults;
+        $result->Presults = $request->Presults;
         
 
         $result->save();

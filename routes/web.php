@@ -11,6 +11,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\resultController;
 use App\Http\Controllers\Student_access_Controller;
 use App\Http\Controllers\Tutor_access_Controller;
+use App\Http\Controllers\stdResultController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +79,7 @@ Route::group(['middleware' => ['auth']], function() {
     
     Route::get('/quiz',[Student_access_Controller::class,'showQuiz'])->name('quiz');
     Route::get('/pastpapers',[Student_access_Controller::class,'showPP'])->name('pp');
+    Route::get('/exam',[stdResultController::class,'showResult'])->name('exam');
    
     Route::get('/tutoraccess',[Tutor_access_Controller::class,'showDashTutor'])->name('tutoraccess');
 

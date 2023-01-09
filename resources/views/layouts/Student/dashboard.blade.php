@@ -17,7 +17,7 @@
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-between">
           <!-- off canvas trigger -->
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             <span class="navbar-toggler-icon"></span>
@@ -31,8 +31,8 @@
             
             <form class="d-flex ms-auto">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                <!-- <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
+                <!-- <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button> -->
               </div>
               
             </form>
@@ -42,7 +42,7 @@
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-person">{{ Auth::user()->name }}</i>
+                  <i class="bi bi-person p-2">{{ Auth::user()->name }}</i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end ms-auto" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -105,7 +105,7 @@
                 <div>
                   <ul class="navbar-nav ps-3">
                     <li>
-                      <a href="{{ route('users.index') }}" class="nav-link me-2 px-3">
+                      <a href="{{ route('exam') }}" class="nav-link me-2 px-3">
                         <span class="px-2"> <i class="bi bi-person-add"></i></span><span> Results</span></a>
                     </li>
                     <li>
